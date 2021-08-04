@@ -1,6 +1,7 @@
 import pytest
 from selenium.webdriver.common.by import By
 from selenium import webdriver
+import time
 from time import sleep
 
 class TestBasket():
@@ -8,5 +9,5 @@ class TestBasket():
       link = "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/"
       browser.get(link)
       time.sleep(30)
-      element = browser.findElement(By.TAG_NAME, "button.btn[@type='submit']")
-      assertElementPresent(element) == true, "Button is not present" 
+      element = browser.find_elements_by_tag_name("button.btn[type='submit']")
+      assert len(element) > 0, "Button is not present" 
