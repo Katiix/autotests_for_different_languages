@@ -9,5 +9,5 @@ class TestBasket():
       link = "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/"
       browser.get(link)
       time.sleep(30)
-      element = browser.find_elements_by_tag_name("button.btn[type='submit']")
+      element = browser.find_elements_by_tag_name("button.btn-add-to-basket[type='submit']")
       assert len(element) > 0, "Button is not present" 
